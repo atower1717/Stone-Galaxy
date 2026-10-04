@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tastes of Eternity — Stone Galaxy (2 Min)</title>
+<title>Tastes of Eternity — Stone Galaxy</title>
 <style>
   /* Gilda Display (SIL OFL) with modified glyphs -- t sheared, p given a
      left-only foot. Renamed per the Reserved Font Name condition. */
@@ -16,19 +16,13 @@
   #enter .kicker{color:#8f8aa0;font-weight:400;letter-spacing:.42em;font-size:clamp(18px,3vw,29px);
     text-transform:uppercase;margin:0 0 1.15em;opacity:.9;}
   #enter h1{color:#e6e2d6;font-weight:400;letter-spacing:.30em;font-size:clamp(30px,6.4vw,66px);
-    text-transform:uppercase;margin:0 0 .5em;opacity:.97;line-height:1;}
+    text-transform:uppercase;margin:0 0 1.5em;opacity:.97;line-height:1;}
   #enter .sub{color:#8f8574;font-style:italic;font-weight:400;letter-spacing:.14em;
     font-size:clamp(15px,2.4vw,25px);margin:0 0 2.4em;opacity:.85;}
   #enter .box{border:1px solid #4a4658;padding:1.0em 2.5em;color:#b7a9c8;letter-spacing:.32em;
     text-transform:uppercase;font-size:clamp(14px,2.0vw,19px);cursor:pointer;
     opacity:0;animation:fade 2.6s ease .8s forwards;transition:background .7s,color .7s,border-color .7s;}
   #enter .box:hover{background:#12101c;color:#e6d8f0;border-color:#6a6280;}
-  #enter .dl{margin-top:1.7em;border:1px solid #2c2a36;padding:.55em 1.5em;color:#7c7688;
-    letter-spacing:.22em;text-transform:uppercase;font-size:clamp(9px,1.2vw,11px);cursor:pointer;
-    text-decoration:none;opacity:0;animation:fade 2.6s ease 1.4s forwards;
-    transition:background .5s,color .5s,border-color .5s;}
-  #enter .dl:hover{background:#100e18;color:#b7a9c8;border-color:#4a4658;}
-  #enter .dl.used{display:none;}
   @keyframes fade{to{opacity:1}}
   #enter.gone{opacity:0;pointer-events:none;}
   #legend{position:fixed;left:22px;bottom:20px;z-index:11;color:#9a94a6;font-family:'Georgia',serif;
@@ -54,24 +48,24 @@
   /* ---------- closing panel: credits, framed card, continue box ----------
      The whole panel is the click target; the box sits inside it, so a click
      there bubbles up to the same handler -- one listener covers both. */
-  #again{position:fixed;left:50%;top:58%;transform:translate(-50%,-50%);z-index:13;
+  #again{position:fixed;left:50%;top:58%;width:max-content;max-width:92vw;transform:translate(-50%,-50%);z-index:13;
     display:flex;flex-direction:column;align-items:center;cursor:pointer;
     opacity:0;pointer-events:none;transition:opacity 1.4s ease;}
   #again.show{opacity:1;pointer-events:auto;}
 
-  #again .credline{margin-bottom:1.5em;text-align:center;
+  #again .credline{margin-bottom:.6em;text-align:center;
     font-family:'Iowan Old Style','Palatino Linotype','Book Antiqua',Palatino,Georgia,serif;
-    font-size:clamp(11px,1.35vw,17px);letter-spacing:.05em;color:#8f8574;}
+    font-size:clamp(13px,1.75vw,22px);letter-spacing:.05em;color:#8f8574;}
   #again .credline .nm{color:#b9b09b;}
   #again .credline .mid{padding:0 .95em;opacity:.5;font-size:.7em;vertical-align:.18em;}
 
   #again .frame{box-sizing:border-box;border:1px solid #cbbf95;background:rgba(10,9,6,.9);
-    width:min(74vw,860px);padding:2.5em 1.4em;text-align:center;
+    max-width:100%;padding:1.9em 2.6em 2.1em;text-align:center;
     font-family:'Iowan Old Style','Palatino Linotype','Book Antiqua',Palatino,Georgia,serif;
     color:#e8e0cd;line-height:1.45;transition:background .8s;}
   #again:hover .frame{background:rgba(24,20,14,.94);}
   #again .title{font-family:'AGDisplay',Didot,'Iowan Old Style',Georgia,serif;color:#8f8574;
-    font-size:clamp(24px,4.0vw,55px);letter-spacing:.02em;text-indent:.01em;line-height:1.05;}
+    font-size:clamp(21px,3.2vw,44px);letter-spacing:.02em;text-indent:.01em;line-height:1.05;}
   #again .body{margin-top:1.15em;font-size:clamp(15px,2.25vw,30px);color:#ddd4bd;
     letter-spacing:.03em;transform:translateX(.015em);}
   #again .body em{font-style:italic;}
@@ -107,7 +101,7 @@
   .gallery{display:block;color:#ddd4bd;font-size:1em;font-family:'AGDisplay',Didot,'Iowan Old Style',Georgia,serif;font-weight:400;
     letter-spacing:.012em;text-indent:.012em;line-height:1;opacity:.97;}
   .lensrow{display:flex;align-items:baseline;justify-content:center;
-    margin-top:.34em;gap:.40em;}
+    margin-top:.34em;gap:.65em;}
   /* all three now share one size and one tracking -- with the sizes equal, a
      wider setting on any one of them would read as inconsistency, not accent */
   .sep{color:#9d8fc4;font-family:'AGDisplay',Didot,'Iowan Old Style',Georgia,serif;
@@ -125,7 +119,7 @@
     font-style:normal;font-weight:400;
     font-size:clamp(16px,2.35vw,30px);letter-spacing:.045em;
     transform:translateX(.0225em);line-height:1.6;opacity:.92;}
-  .insp .head{display:block;margin-bottom:.3em;}
+  .insp .head{display:block;margin-bottom:0;font-size:1.12em;line-height:1.35;}
   /* the Enter button's form, scaled right down and in the card's purple */
   #nextbox{display:inline-block;margin-top:3.6em;text-align:center;
     border:1px solid rgba(157,143,196,.78);padding:.85em 2.1em .9em;
@@ -138,7 +132,7 @@
     color:#ddd4bd;letter-spacing:.10em;text-indent:.10em;opacity:.88;}
   #nextbox .note .dot{font-size:.66em;vertical-align:.18em;opacity:.75;
     letter-spacing:0;padding:0 .25em;}
-  #nextbox .go{display:block;margin-top:.42em;
+  #nextbox .go{display:block;
     font-size:clamp(18px,2.35vw,26px);letter-spacing:.22em;text-indent:.22em;}
 </style>
 </head>
@@ -151,28 +145,25 @@
      one line in begin() that keeps it out of the document. -->
 
 <div id="veil"></div>
-<div id="again"><div class="credline"><span class="lbl">photograph</span> <span class="nm">Debbie Parker</span><span class="mid">&bull;</span><span class="lbl">soundtrack</span> <span class="nm">Alan Tower</span></div><div class="frame"><div class="title">To Experience Again</div><div class="body">Shift your attention from seeing and hearing<br>to <em>being aware</em> of seeing and hearing<span class="last">- Notice yourself Noticing -</span></div><div class="cbox"><span class="go">continue</span></div></div></div>
+<div id="again"><div class="credline"><span class="lbl">soundtrack</span> <span class="nm">Alan Tower</span></div><div class="frame"><div class="title">Once more in a fresh way?</div><div class="body">While watching become aware<br>of your seeing and hearing</div><div class="cbox"><span class="go">Try it</span></div></div></div>
 
 <div id="gal">
   <div id="galinner">
     <div class="mastwrap"><span class="gallery">Aperture Gallery</span></div>
     <div class="lensrow">
-      <span class="flank">one world</span>
+      <span class="flank">One World</span>
       <span class="sep">&bull;</span>
-      <span class="flank">one air</span>
-      <span class="sep">&bull;</span>
-      <span class="lenses">endless lenses</span>
+      <span class="lenses">Endless Lenses</span>
     </div>
-    <div class="tag">photographs latently alive, animated and sonnified</div>
-    <div class="insp"><span class="head">Inspired by</span>the astronaut &ldquo;overview effect&rdquo;<br>the nondual pathless path</div>
-    <div id="nextbox"><span class="note">these are short <span class="dot">&bull;</span> please drop in</span><span class="go">continue</span></div>
+    <div class="tag">Still photographs of nature brought to life<br>Soundtracks created with invented acoustic instruments</div>
+    <div class="insp"><span class="head">Inspired by</span>What happens when astronauts see Earth from space?<br>What&rsquo;s it like to simply be?</div>
+    <div id="nextbox"><span class="go">Continue</span></div>
   </div>
 </div>
 
 <div id="enter">
   <div class="kicker">Tastes of Eternity</div>
   <h1>Stone Galaxy</h1>
-  <div class="sub">2 Min</div>
   <div class="box">Enter Galactic Space</div>
 </div>
 
@@ -812,7 +803,6 @@ if(nextbox) nextbox.addEventListener('click',galNext);
 var enter=document.getElementById('enter');
 var legend=document.getElementById('legend');   // absent in v45; guarded below
 var enterBox=enter.querySelector('.box');
-var dlbox=document.getElementById('dlbox');
 var veil=document.getElementById('veil');
 var again=document.getElementById('again');
 
@@ -913,13 +903,4 @@ function begin(){
 }
 enterBox.addEventListener('click',begin);
 again.addEventListener('click',begin);
-(function prepareDownload(){
-  try{ var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
-    var blob=new Blob([html],{type:'text/html'});
-    if(dlbox) dlbox.href=URL.createObjectURL(blob);
-  }catch(e){}
-})();
-if(dlbox) dlbox.addEventListener('click',function(ev){
-  ev.stopPropagation(); setTimeout(function(){ dlbox.classList.add('used'); },800);
-});
 </script></body></html>
